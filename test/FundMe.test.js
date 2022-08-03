@@ -107,5 +107,11 @@ describe("FundMe", () => {
         );
       }
     });
+    it("Only Allows owner to witdraw money", async () => {
+      const accounts = await ethers.getSigners();
+      const attacker = accounts[1];
+      const attackerConnectedContract = await fundMe.connect(attacker);
+      expect(attackerConnectedContract.withdraw()).to.be.reverted;
+    });
   });
 });
