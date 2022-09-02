@@ -14,9 +14,9 @@ require("@nomicfoundation/hardhat-toolbox");
 
 const COINMARKETCAP_API_KEY = process.env.coinmarketapi;
 
-const RINKEBY_RPC_URL = process.env.rinkebyRpcUrl || "";
-const PRIVATE_KEY = process.env.rinkebyKey || "";
-const ETHERSCAN_API_KEY = process.env.Ether_api || "";
+const RINKEBY_RPC_URL = process.env.rinkebyRpcUrl;
+const PRIVATE_KEY = process.env.rinkebyKey;
+const ETHERSCAN_API_KEY = process.env.Ether_api;
 
 module.exports = {
   defaultNetwork: "hardhat",
