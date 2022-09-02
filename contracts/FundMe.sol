@@ -92,6 +92,14 @@ contract FundMe {
         require(success);
     }
 
+    fallback() external payable {
+        //parameter received
+    }
+
+    receive() external payable {
+        //parameter received
+    }
+
     /** @notice Gets the amount that an address has funded
      *  @param fundingAddress the address of the funder
      *  @return the amount funded
